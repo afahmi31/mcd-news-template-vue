@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+
+/* #site-header .navigation-wrapper{
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
-}
+} */
 
-#site-main {
+/* #site-main {
   min-height: calc(100vh - 240px);
-}
+} */
 
-#site-footer .footer-wrapper{
+/* #site-footer .footer-wrapper{
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+} */
+
+.nav-icon{
+  @apply p-[6px] bg-navIcon rounded-[6px] cursor-pointer;
+}
+.list-item{
+  @apply px-[20px] py-[23px] hover:bg-listNav hover:bg-opacity-10 hover:text-listNav cursor-pointer text-garyText font-bricolage;
 }
