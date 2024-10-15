@@ -15,19 +15,19 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
+                                  image : '/public/image1.png',
                                   desc : 'lorem ipsum dolor bal bal bal',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
+                                  image : '/public/image2.png',
                                   desc : 'lorem ipsum dolor bal bal bal',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
+                                  image : '/public/image3.png',
                                   desc : 'lorem ipsum dolor bal bal bal',
                                   category : 'sport',
                                   date : 'sep.24.2024'
@@ -57,29 +57,29 @@ data(){
                               },
                           ]
                       },
-                      {
-                          title: 'bussines',
-                          subItem: [
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                          ]
-                      },
+                    //   {
+                    //       title: 'bussines',
+                    //       subItem: [
+                    //           {
+                    //               image : '/public/hamburger.svg',
+                    //               desc : 'lorem ipsum dolor bal bal bal',
+                    //               category : 'sport',
+                    //               date : 'sep.24.2024'
+                    //           },
+                    //           {
+                    //               image : '/public/hamburger.svg',
+                    //               desc : 'lorem ipsum dolor bal bal bal',
+                    //               category : 'sport',
+                    //               date : 'sep.24.2024'
+                    //           },
+                    //           {
+                    //               image : '/public/hamburger.svg',
+                    //               desc : 'lorem ipsum dolor bal bal bal',
+                    //               category : 'sport',
+                    //               date : 'sep.24.2024'
+                    //           },
+                    //       ]
+                    //   },
                   ]
               },
               {
