@@ -1,5 +1,5 @@
 <script>
-import Navbar from './components/Navbar.vue';
+import Navbar from './components/navbar.vue';
 export default{
     components :{
         Navbar : Navbar
@@ -544,4 +544,4 @@ data(){
     </header>
 </template>
 
-<style scoped="scoped"></style>
+<style lang="css" scoped></style>

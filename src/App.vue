@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <Home />
+  <Home/>
 </template>
 
-<style scoped="scoped"></style>
+<style lang="css" scoped></style>
