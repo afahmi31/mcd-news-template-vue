@@ -19,6 +19,3 @@
 .nav-icon{
   @apply p-[6px] bg-navIcon rounded-[6px] cursor-pointer;
 }
-.list-item{
-  @apply px-[20px] py-[23px] hover:bg-listNav hover:bg-opacity-10 hover:text-listNav cursor-pointer text-garyText font-bricolage;
-}

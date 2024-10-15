@@ -1,9 +1,14 @@
-<script setup="setup">
+<script>
 import Home  from './home.vue';
+export default {
+  components: {
+    Home: Home
+  }
+}
 </script>
 
 <template>
-    <Home/>
+    <Home />
 </template>
 
 <style scoped="scoped"></style>
