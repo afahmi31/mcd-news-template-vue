@@ -1,10 +1,12 @@
-<script>
-import HeroPopuler from './components/HeroPopuler.vue';
-export default {
-    components:{
-        HeroPopuler:HeroPopuler
-    }
-}
+<script setup="setup">
+
+const data = ref([
+    { image: '/images/komeng.png', text: 'Text 2' },
+    { image: '/images/timnas.png', text: 'Text 1' },
+    { image: '/images/mansur.png', text: 'Text 3' },
+    { image: '/images/bowo.png', text: 'Text 3' },
+]);
+
 </script>
 
 <template>
@@ -15,7 +17,7 @@ export default {
             </div>
         </header>
         <main id="site-main">
-            <HeroPopuler/>
+            ini populer
         </main>
         <footer id="site-footer">
             <div class="footer-wrapper">
