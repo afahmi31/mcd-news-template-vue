@@ -544,4 +544,4 @@ data(){
     </header>
 </template>
 
-<style scoped="scoped"></style>
+<style lang="css" scoped></style>

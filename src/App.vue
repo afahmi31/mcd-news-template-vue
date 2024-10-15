@@ -8,19 +8,7 @@ export default {
 </script>
 
 <template>
-  <div id="site">
-    <header id="site-header">
-      <div class="navigation-wrapper">
-        <div>Header Area</div>
-      </div>
-    </header>
-    <main id="site-main">{{ message }}</main>
-    <footer id="site-footer">
-      <div class="footer-wrapper">
-        <div>Footer Area</div>
-      </div>
-    </footer>
-  </div>
+  <Home/>
 </template>
 
-<style scoped="scoped"></style>
+<style lang="css" scoped></style>
