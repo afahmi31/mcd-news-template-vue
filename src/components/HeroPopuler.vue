@@ -49,15 +49,15 @@
             <div class="border-2 lg:border-4 border-black w-[32px]"></div>
             <div class="border-2 lg:border-4 border-black w-[32px]"></div>
             </div>
-            <div class=" grid grid-cols-2 gap-[20px] ">
+            <div class=" grid grid-cols-2 lg:grid-flow-col justify-items-center gap-[20px] ">
                 <div v-for="card in Cards" :key="card.title">
-                    <div :class="['card', card.kategori.toLowerCase(), 'w-[154px] lg:w-[285px]']">
+                    <div :class="['card', card.kategori.toLowerCase(), 'w-[154px] lg:w-[220px] xl:w-[280px]']">
                         <img :src="card.img" alt="image">
                         <div class="category flex justify-between">
-                            <p class=" ml-[10px] font-bold font-bricolage text-[#002E40]">{{ card.kategori }}</p>
+                            <p class=" text-[14px] lg:text-[16px] ml-[10px] font-bold font-bricolage text-[#002E40]">{{ card.kategori }}</p>
                             <p class="text-[12px] text-[#002E40] font-bricolage leading-[24px]">{{ card.date }}</p>
                         </div> 
-                        <p class="text-[20px] font-semibold leading-[130%] text-[#1D1717] font-bricolage">{{ card.title }}</p> 
+                        <p class="text-[12px] lg:text-[20px] font-semibold leading-[130%] text-[#1D1717] font-bricolage">{{ card.title }}</p> 
                     </div>
                 </div>
             </div>
