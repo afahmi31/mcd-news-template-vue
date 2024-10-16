@@ -6,35 +6,35 @@ html {
   @apply text-[#020B1F];
 }
 h1.news-text {
-  @apply sm:text-[24px] md:text-[50px] font-bold md:leading-[70.5px] tracking-tight md:tracking-normal;
+  @apply sm:text-[24px] md:text-4xl xl:text-[50px] text-pretty font-bold md:leading-relaxed xl:leading-[70.5px] tracking-tight md:tracking-normal;
 }
 h2.news-text {
-  @apply text-[56px] leading-[120%] tracking-normal;
+  @apply sm:text-[56px] md:text-[20px] xl:text-[56px] leading-[120%] tracking-normal;
 }
 h3.news-text {
-  @apply text-[24px] leading-[140%] tracking-normal;
+  @apply sm:text-[24px] md:text-[14px] xl:text-[24px] leading-[140%] tracking-normal;
 }
 p.news-text {
-  @apply sm:text-[14px] md:text-[24px] leading-[190%] tracking-[0.32px];
+  @apply sm:text-[14px] md:text-[16px] xl:text-[24px]  leading-[190%] tracking-[0.32px];
 }
 figcaption.news-text {
   @apply sm:text-[10px] md:text-[14px] leading-[190%] text-black;
 }
 
 .tag-aside {
-  @apply sm:text-[14px] md:text-[16px] leading-[190%] text-black pl-[15px];
+  @apply sm:text-[14px] md:text-[12px] xl:text-[16px] leading-[190%] text-black pl-[15px];
 }
 
 .title-aside {
-  @apply sm:text-[14px] md:text-[16px] font-bold leading-[140%] tracking-normal;
+  @apply sm:text-[14px] md:text-[12px] xl:text-[16px] text-balance font-bold leading-[140%] tracking-normal line-clamp-3;
 }
 
-.text-related {
-  @apply font-bold;
+.text-related p {
+  @apply font-bold md:text-[12px] sm:text-[16px] xl:text-[24px];
 }
 
 .text-related li {
-  @apply font-bold text-[14px] text-[#393939];
+  @apply font-bold sm:text-[12px] xl:text-[14px] md:text-[10px] text-[#393939];
 }
 
 .share .news-text {
@@ -42,11 +42,11 @@ figcaption.news-text {
 }
 
 .aside-title h2 {
-  @apply sm:text-[20px] md:text-[24px] font-semibold;
+  @apply sm:text-[20px] md:text-[18px] xl:text-[24px] font-semibold;
 }
 
 .aside-title a {
-  @apply sm:text-[14px] font-normal;
+  @apply sm:text-[14px] md:text-[10px] xl:text-[14px] font-normal;
 }
 
 .aside-title span {

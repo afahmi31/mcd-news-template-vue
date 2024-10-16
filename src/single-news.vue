@@ -13,7 +13,7 @@
         <h1 class="news-text">
           Macau Open 2024: Alwi Farhan overcomes Malaysian representative
         </h1>
-        <div class="flex sm:flex-col md:flex-row justify-between">
+        <div class="flex sm:flex-col md:flex-row items-end justify-between">
           <p class="news-text">kamis 26, agustus 2024 - 12.34 WIB</p>
           <div class="share">
             <p class="news-text">Bagikan :</p>
@@ -105,7 +105,7 @@
               <h2 class="news-text">
                 Populer <span class="news-text"> News</span>
               </h2>
-              <a class="flex flex-row gap-2" href=""
+              <a class="see-all" href="#"
                 >SEE ALL
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
