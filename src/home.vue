@@ -1,110 +1,45 @@
 <script>
 import Navbar from './components/Navbar.vue';
+import Footer from  './components/Footer.vue';
+
+
 export default{
     components :{
-        Navbar : Navbar
+        Navbar : Navbar,
+        FooterSectio : Footer
     },
 data(){
   return {
       menus: [
               {
                 link : '#',
-                name : 'hot news',
+                name : 'Natural Disaste',
                   subMenu: [
                       {
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/image1.png',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/image2.png',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/image3.png',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                          ]
-                      },
-                      {
-                          title: 'politics',
-                          subItem: [
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'Business',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                          ]
-                      },
-                    //   {
-                    //       title: 'bussines',
-                    //       subItem: [
-                    //           {
-                    //               image : '/public/hamburger.svg',
-                    //               desc : 'lorem ipsum dolor bal bal bal',
-                    //               category : 'sport',
-                    //               date : 'sep.24.2024'
-                    //           },
-                    //           {
-                    //               image : '/public/hamburger.svg',
-                    //               desc : 'lorem ipsum dolor bal bal bal',
-                    //               category : 'sport',
-                    //               date : 'sep.24.2024'
-                    //           },
-                    //           {
-                    //               image : '/public/hamburger.svg',
-                    //               desc : 'lorem ipsum dolor bal bal bal',
-                    //               category : 'sport',
-                    //               date : 'sep.24.2024'
-                    //           },
-                    //       ]
-                    //   },
-                  ]
-              },
-              {
-                link : '#',
-                name : 'Natural Disaster',
-                subMenu: [
-                      {
-                          title: 'sport',
-                          subItem: [
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
-                                  date : 'sep.24.2024'
-                              },
-                              {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
-                                  category : 'sport',
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'politics',
                                   date : 'sep.24.2024'
                               },
                           ]
@@ -113,20 +48,26 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -136,20 +77,26 @@ data(){
                           title: 'bussines',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -165,20 +112,26 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -188,43 +141,55 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                           ]
                       },
                       {
-                          title: 'bussines',
+                          title: 'Education',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -240,20 +205,26 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -263,20 +234,26 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -286,20 +263,26 @@ data(){
                           title: 'bussines',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -315,20 +298,26 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -338,20 +327,26 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -361,20 +356,26 @@ data(){
                           title: 'bussines',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -390,20 +391,26 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -413,20 +420,26 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -436,20 +449,26 @@ data(){
                           title: 'bussines',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -465,20 +484,26 @@ data(){
                           title: 'sport',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -488,20 +513,26 @@ data(){
                           title: 'politics',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -511,20 +542,26 @@ data(){
                           title: 'bussines',
                           subItem: [
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image1.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image2.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
                               {
-                                  image : '/public/hamburger.svg',
-                                  desc : 'lorem ipsum dolor bal bal bal',
+                                  image : '/image3.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
+                                  category : 'sport',
+                                  date : 'sep.24.2024'
+                              },
+                              {
+                                  image : '/image4.png',
+                                  desc : 'Riot breaks out after Persib Bandung vs Persija Jakarta match, supporters enter the field',
                                   category : 'sport',
                                   date : 'sep.24.2024'
                               },
@@ -542,6 +579,12 @@ data(){
     <header id="site-header">
         <Navbar :p_menus="menus"/>    
     </header>
+    <main>
+
+    </main>
+    <footer>
+        <FooterSectio/> 
+    </footer>
 </template>
 
 <style scoped="scoped"></style>
