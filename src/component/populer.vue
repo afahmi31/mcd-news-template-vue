@@ -6,57 +6,29 @@ export default {
                 {
                     title:
                         'Remind Members of Parliament, Chief Justice: Your Oath Contains Responsibility to the Nation...',
-                    image: '/images/rapat.png',
+                    image: '/images/komeng2.png',
                     date: 'Sep.24.2024',
                     author: 'Politcs',
                 },
                 {
                     title: 'Suhandinata Cup 2024: Indonesia wins over Macau in first match',
-                    image: '/images/badminton.png',
+                    image: '/images/indonesia.png',
                     date: 'Sep.24.2024',
                     author: 'Sport',
                 },
                 {
                     title:
                         'Police in Blitar City Invited to Improve Kasatkamling to Deal with Disasters',
-                    image: '/images/rapat2.png',
-                    date: 'Sep.24.2024',
-                    author: 'Disaster',
-                },
-                {
-                    title:
-                        "Pertamina's non-subsidized fuel prices will decrease again as of October 2024, here's why",
-                    image: '/images/pom.png',
-                    date: 'Sep.24.2024',
-                    author: 'Business',
-                },
-                {
-                    title:
-                        'Things not to do when playing basketball, can be a violation',
-                    image: '/images/basket.png',
-                    date: 'Sep.24.2024',
-                    author: 'Sport',
-                },
-                {
-                    title:
-                        'Officially Become DPD Member, Komeng Will Push for National Comedy Day',
-                    image: '/images/komeng.png',
+                    image: '/images/paloh.png',
                     date: 'Sep.24.2024',
                     author: 'Politcs',
                 },
                 {
                     title:
-                        'Kurnia’s Story, Vocational School Graduate Working on Luxury Cruise Ship, Salary Dozen Million Rupiahs',
-                    image: '/images/education.png',
+                        "Pertamina's non-subsidized fuel prices will decrease again as of October 2024, here's why",
+                    image: '/images/prabowo.png',
                     date: 'Sep.24.2024',
-                    author: 'Education',
-                },
-                {
-                    title:
-                        'Boyolali Police Chief’s Car Accident on Kandeman Toll Road, Driver-Attendant Killed',
-                    image: '/images/jaring.png',
-                    date: 'Sep.24.2024',
-                    author: 'Accident',
+                    author: 'Business',
                 },
             ],
         };
@@ -69,7 +41,7 @@ export default {
         <!-- Header -->
         <div class="grid grid-cols-2 md:grid-cols-2">
             <div class="flex gap-1 flex-wrap">
-                <p class="text-[32px] md:text-[40px] font-semibold text-black">Lastest</p>
+                <p class="text-[32px] md:text-[40px] font-semibold text-black">Populer</p>
                 <p class="text-[32px] md:text-[40px] font-semibold text-red-600">News</p>
             </div>
             <div class="flex justify-end items-center py-[6px]">
@@ -91,10 +63,10 @@ export default {
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
             <div v-for="card in cards" :key="card.title" class="">
                 <img :src="card.image" alt="image" class="w-[full] h-[auto] md:w-[285px] md:h-[291px]" />
-                <div class="flex justify-between mt-2">
-                    <div class="border-l-4 border-black">
+                <div class="flex mt-2 justify-between">
+                    <div class="border-l-4 border-black ">
                         <p class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">{{ card.author }}</p>
-                    </div>
+                    </div class="">
                     <p class="text-[12px] leading-[12px]  text-[#002E40] font-poppins">{{ card.date }}</p>
                 </div>
                 <p class="text-[12px] leading-[15.6px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717]">{{ card.title }}</p>

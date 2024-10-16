@@ -7,72 +7,72 @@ export default {
 <template>
     <section class="container lg:max-w-[1200px] mx-auto">
         <div class="pt[71px]">
-            <div class="text-center flex gap-1 flex-wrap justify-center items-center">
-                <div class=" h-0 border-[2px] w-[491px] sm:w-[244px] border-black mt-4"></div>
+            <div class="text-center flex gap-1 justify-center items-center">
+                <div class=" h-[4px] border-[2px] md:w-[491px] w-[244px] border-black mt-4"></div>
                 <p class="text-[32px] md:text-[40px] font-semibold text-black">Hot</p>
                 <p class="text-[32px] md:text-[40px] font-semibold text-red-600">News</p>
-                <div class="h-0 border-[2px] w-[491px] sm:w-[244px] border-black mt-4"></div>
+                <div class="h-[4px] border-[2px] md:w-[491px] w-[244px] border-black mt-4"></div>
             </div>
         </div>
         <div class=" grid grid-cols-1 lg:grid-cols-2 gap-4 pt-[33px]">
             <!-- Large image on the left -->
             <div class="relative">
-                <img src="/images/speed.jpeg" alt="Main News" class="w-[590px] h-[588px] object-cover">
+                <img src="/images/speed.jpeg" alt="Main News" class="w-[375px] h-[272px] md:w-[590px] md:h-[588px] object-cover">
                 <div class="absolute p-4 bottom-0">
-                    <p class="md:text-[30px] md:leading-[33.9px] text-white">Record Breaking, IShowSpeed Reaches 1
+                    <p class="text-[16px] leading-[18.08px] md:text-[30px] md:leading-[33.9px] font-bold text-white">Record Breaking, IShowSpeed Reaches 1
                         Million Steaming Views in
                         Jakarta, Indonesia!</p>
                     <div class="flex items-start justify-between">
                         <div class="border-l-4 border-yellow-500 pl-2">
-                            <p class="font-medium text-white text-sm sm:text-base font-poppins">Populer</p>
+                            <p class="font-medium text-white text-[16px] leading-[16px] font-poppins">Populer</p>
                         </div>
-                        <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">Sep.24.2024</p>
+                        <p class="hidden md:block text-[16px] leading-[16px] text-white font-poppins ml-4">Sep.24.2024</p>
                     </div>
                 </div>
             </div>
             <!-- Second image -->
             <div class="flex flex-wrap">
                 <div class="relative">
-                    <img src="/images/puan.jpeg" alt="News 2" class="w-[590px] h-[290px] object-cover">
+                    <img src="/images/puan.jpeg" alt="News 2" class="w-[375px] h-[193px] md:w-[590px] md:h-[290px] object-cover">
                     <div class="absolute p-4 bottom-[10px]">
-                        <p class="md:text-[24px] md:leading-[27.12px] font-bold text-white ">
+                        <p class="text-[16px] leading-[18.08px] md:text-[24px] md:leading-[27.12px] font-bold text-white ">
                             Record Breaking, IShowSpeed Reaches 1 Million Steaming Views
                             in Jakarta, Indonesia!</p>
                         <div class="flex items-start justify-between">
                             <div class="border-l-4 border-yellow-500 pl-2">
-                                <p class="font-medium text-white text-sm sm:text-base font-poppins">Populer</p>
+                                <p class="font-medium text-white text-[16px] leading-[16px] font-poppins">Populer</p>
                             </div>
-                            <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">Sep.24.2024</p>
+                            <p class="hidden md:block text-[16px] leading-[16px] text-white font-poppins ml-4">Sep.24.2024</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex justify-between gap-4 pt-[20px]">
                     <div class="relative w-[50%]">
-                        <img src="/images/komeng1.jpeg" alt="News 3" class="w-[285px] h-[278px] object-cover">
-                        <div class="absolute p-4 bottom-[10px]">
-                            <p class="md:text-[16px] md:leading-[18.08px] font-bold text-white">Rice
+                        <img src="/images/komeng1.jpeg" alt="News 3" class="w-[178px] h-[167px] md:w-[285px] md:h-[278px] object-cover">
+                        <div class="absolute p-2 bottom-[10px]">
+                            <p class="text-[12px] leading-[12.6px] md:text-[16px] md:leading-[18.08px] font-bold text-white">Rice
                                 Prices in Indonesia are High but Farmers' Income is Low,
                                 What's the Cause?</p>
                             <div class="flex items-start justify-between">
                             <div class="border-l-4 border-yellow-500 pl-2">
-                                <p class="font-medium text-white text-sm sm:text-base font-poppins">Populer</p>
+                                <p class="font-medium text-white text-[16px] leading-[16px] font-poppins">Populer</p>
                             </div>
-                            <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">Sep.24.2024</p>
+                            <p class="hidden md:block text-[12px] leading-[16px] text-white font-poppins ml-4">Sep.24.2024</p>
                         </div>
                         </div>
                     </div>
                     <div class="relative w-[50%]">
-                        <img src="/images/emas.png" alt="News 4" class="w-[285px] h-[278px] object-cover">
-                        <div class="absolute p-4 bottom-[10px]">
-                            <p class="md:text-[16px] md:leading-[18.08px] font-bold text-white">
+                        <img src="/images/emas.png" alt="News 4" class="w-[178px] h-[167px] md:w-[285px] md:h-[278px] object-cover">
+                        <div class="absolute p-2 bottom-[10px]">
+                            <p class="text-[12px] leading-[12.6px] md:text-[16px] md:leading-[18.08px] font-bold text-white">
                                 Record Breaking, IShowSpeed Reaches 1 Million Steaming Views
                                 in Jakarta, Indonesia!</p>
                             <div class="flex items-start justify-between">
                             <div class="border-l-4 border-yellow-500 pl-2">
-                                <p class="font-medium text-white text-sm sm:text-base font-poppins">Populer</p>
+                                <p class="font-medium text-white text-[16px] leading-[16px] font-poppins">Populer</p>
                             </div>
-                            <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">Sep.24.2024</p>
+                            <p class="hidden md:block text-[12px] leading-[16px] text-white font-poppins ml-4">Sep.24.2024</p>
                         </div>
                         </div>
                     </div>
