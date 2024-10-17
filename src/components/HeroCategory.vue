@@ -11,8 +11,8 @@
             <div class="lg:border-4 border-2 border-black w-full h-0"></div>
         </div>
         <div class="relative mt-[26px]">
-            <img class="w-full object-cover lg:h-[544px] h-[231px] md:h-[321px]" src="../assets/heroCategory.png" alt="hero-categor">
-            <div class=" absolute bottom-0 px-[36px] py-[21px]">
+            <img class="w-full object-cover over lg:h-[544px] h-[231px] md:h-[321px]" src="../assets/heroCategory.png" alt="hero-categor">
+            <div class=" absolute bottom-0 px-[36px] py-[21px] bg-black bg-opacity-40">
                 <h1 class="lg:text-[32px] lg:leading-[36.16px] text-[16px] leading-[18.08px] md:text-[24px] md:leading-[32px] font-bold font-bricolage text-white">IBL All Indonesian: Rajawali Medan wins over Rans Simba Bogor with a score of 68-58</h1>
                 <div class="flex text-white justify-between items-center text-center mt-[24px] mb-[21px ]">
                     <p class="lg:text-[24px] lg:leading-[24px] text-[16px] leading-[18.08px] pl-[15px] border-l-4 border-[#FFD900]">Basket Ball</p>

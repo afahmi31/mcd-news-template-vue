@@ -15,7 +15,8 @@ export default {
         footerBg : '#151515',
         footerText : '#B7B7B7',
         inputFooter : '#2A2929',
-        line : '#E2E2E2'
+        line : '#E2E2E2',
+        categoryText : '#8B919E'
       },
       fontFamily: {
         'bricolage': ['Bricolage Grotesque', 'sans-serif'],
