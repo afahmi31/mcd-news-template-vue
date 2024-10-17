@@ -7,7 +7,7 @@ export default {
             judul_must: 'Must',
             judul_read: 'Read',
             image_tengah: { url: '/images/tengah.png' },
-            image_tengah_sm: { url: '/images/tengah1.png'},
+            image_tengah_sm: { url: '/images/tengah1.png' },
             judul_text_tengah: 'Jokowi warns to be careful exporting sea sand, only sediment is allowed',
             judul_text_tengah_kecil: 'Populer',
             text_tengah: 'Sep.24.2024',
@@ -46,37 +46,37 @@ export default {
 
 <template>
     <section class="container lg:max-w-[1200px] mx-auto pt-[74px]">
-        <div class="grid grid-cols-2 md:grid-cols-2">
+        <div class="grid grid-cols-2 md:grid-cols-2 px-[24px] md:px-0">
             <div class="flex gap-1 flex-wrap">
-                <p class="text-[32px] md:text-[40px] font-semibold text-black">
+                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-black">
                     {{ mustread.judul_must || '.' }}
-                </p>
-                <p class="text-[32px] md:text-[40px] font-semibold text-red-600">
+                </h1>
+                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-red-600">
                     {{ mustread.judul_read || '.' }}
-                </p>
+                </h1>
             </div>
             <div class="flex justify-end items-center py-[6px]">
-                <div class="w-[150px] h-[49px] flex items-center justify-center">
+                <div class="flex items-center justify-center">
                     <p class="text-black text-[16px] pr-[8px]">See All</p>
                     <img :src="resourcesSvg" alt="Arrow Icon" />
                 </div>
             </div>
         </div>
 
-        <div class="flex gap-[12px] flex-wrap">
-            <div class="border-[4px] w-[180px] sm:w-[244px] border-black mt-4"></div>
-            <div class="border-[4px] w-[24px] sm:w-[32px] border-black mt-4"></div>
-            <div class="border-[4px] w-[24px] sm:w-[32px] border-black mt-4"></div>
+        <div class="flex gap-[12px] flex-wrap px-[24px] md:px-0">
+            <div class="border-[2px] w-[81px] md:w-[244px] border-black mt-2"></div>
+            <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
+            <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-12 gap-[20px] pt-5 ">
+        <div class="grid grid-cols-2 md:grid-cols-12 gap-[20px] pt-5  ">
             <!-- bagian tengah mobile -->
             <div class="md:hidden block col-span-12 md:col-span-6 relative">
                 <img :src="mustread.image_tengah_sm.url" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute p-4 bottom-0">
-                    <p class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
+                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
                         {{ mustread.judul_text_tengah || '.' }}
-                    </p>
+                    </h2>
                     <div class="flex items-start justify-between">
                         <div class="border-l-4 border-yellow-500 pl-2">
                             <p class="font-medium text-white text-sm sm:text-base font-poppins">
@@ -90,7 +90,7 @@ export default {
                 </div>
             </div>
             <!-- bagian kiri -->
-            <div class="col-span-6 md:col-span-3 items-center ">
+            <div class="col-span-6 md:col-span-3 items-center pl-[24px] md:px-0 ">
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
                     <img :src="mustread.image_kiri.url" alt="image" class="w-[154px] h-[140px] md:w-full md:h-auto" />
                     <div class="flex justify-between mt-2">
@@ -104,21 +104,22 @@ export default {
                             {{ mustread.text_kiri || '.' }}
                         </p>
                     </div>
-                    <p class="text-[16px] leading-[20.8px] md:text-[20px] md:leading-[26px] font-semibold font-inter mt-3">
+                    <h2
+                        class="text-[16px] leading-[20.8px] md:text-[20px] md:leading-[26px] font-semibold font-inter mt-3">
                         {{ mustread.judul_text_kiri || '.' }}
-                    </p>
+                    </h2>
                     <div class="border-t-2 border-gray-500 my-2"></div>
                     <p id="readMoreText"
                         class="text-[14px] leading-[22px] md:text-[16px] md:leading-[22px] font-inter overflow-hidden transition-all duration-300 ease-in-out"
                         :class="readMoreText ? 'max-h-full' : 'max-h-[4.5rem]'">
                         {{ mustread.desciption_text_kiri || '.' }}
                     </p>
-    
+
                     <button id="readMoreBtn" class=" text-blue-500 font-semibold hover:underline focus:outline-none"
                         @click="toggleReadMore">
                         {{ readMoreText ? 'Read Less' : 'Read More' }}
                     </button>
-    
+
 
                 </div>
             </div>
@@ -126,9 +127,9 @@ export default {
             <div class="hidden md:block col-span-12 md:col-span-6 relative">
                 <img :src="mustread.image_tengah.url" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute p-4 bottom-0">
-                    <p class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
+                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
                         {{ mustread.judul_text_tengah || '.' }}
-                    </p>
+                    </h2>
                     <div class="flex items-start justify-between">
                         <div class="border-l-4 border-yellow-500 pl-2">
                             <p class="font-medium text-white text-sm sm:text-base font-poppins">
@@ -142,7 +143,7 @@ export default {
                 </div>
             </div>
             <!-- bagian kanan -->
-            <div class="col-span-6 md:col-span-3 space-y-4">
+            <div class="col-span-6 md:col-span-3 space-y-4 pr-[24px] md:px-0">
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
                     <img :src="mustread.image_kanan1.url" alt="image"
                         class="w-[153px] h-[95px] md:w-full md:h-full object-cover" />
@@ -157,10 +158,10 @@ export default {
                             {{ mustread.text_kanan1 }}
                         </p>
                     </div>
-                    <p
-                        class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-1">
+                    <h2
+                        class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-[12px]">
                         {{ mustread.description_text_kanan1 }}
-                    </p>
+                    </h2>
                 </div>
                 <div class="border-t-2 border-gray-500 my-2"></div>
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
@@ -177,10 +178,10 @@ export default {
                             {{ mustread.text_kanan2 }}
                         </p>
                     </div>
-                    <p
-                        class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-1">
+                    <h2
+                        class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-[12px]">
                         {{ mustread.description_text_kanan2 }}
-                    </p>
+                    </h2>
                 </div>
             </div>
         </div>

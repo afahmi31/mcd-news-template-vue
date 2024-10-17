@@ -65,15 +65,14 @@ export default {
 </script>
 
 <template>
-    <section class="container lg:max-w-[1200px] mx-auto pt-[74px]">
-        <!-- Header -->
-        <div class="grid grid-cols-2 md:grid-cols-2">
+    <section class="container lg:max-w-[1200px] mx-auto pt-[74px] px-[24px] md:px-0">
+        <div class="grid grid-cols-2 md:grid-cols-2 ">
             <div class="flex gap-1 flex-wrap">
-                <p class="text-[32px] md:text-[40px] font-semibold text-black">Lastest</p>
-                <p class="text-[32px] md:text-[40px] font-semibold text-red-600">News</p>
+                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-black">Lastest</h1>
+                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-red-600">News</h1>
             </div>
             <div class="flex justify-end items-center py-[6px]">
-                <div class=" w-[150px] h-[49px] flex items-center justify-center">
+                <div class="flex items-center justify-center">
                     <p class="text-black text-[16px] pr-[8px]">See All</p>
                     <img src="/svg/panah-kanan.svg" alt="Arrow Icon" />
                 </div>
@@ -82,22 +81,28 @@ export default {
 
         <!-- Divider -->
         <div class="flex gap-[12px] flex-wrap">
-            <div class="border-[4px] w-[180px] sm:w-[244px] border-black mt-2"></div>
-            <div class="border-[4px] w-[24px] sm:w-[32px] border-black mt-2"></div>
-            <div class="border-[4px] w-[24px] sm:w-[32px] border-black mt-2"></div>
+            <div class="border-[2px] w-[81px] md:w-[244px] border-black mt-2"></div>
+            <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
+            <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
         </div>
 
         <!-- Cards -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 ">
             <div v-for="card in cards" :key="card.title" class="">
                 <img :src="card.image" alt="image" class="w-[full] h-[auto] md:w-[285px] md:h-[291px]" />
-                <div class="flex justify-between mt-2">
+                <div class="justify-between mt-2 hidden md:block">
                     <div class="border-l-4 border-black">
                         <p class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">{{ card.author }}</p>
                     </div>
                     <p class="text-[12px] leading-[12px]  text-[#002E40] font-poppins">{{ card.date }}</p>
                 </div>
-                <p class="text-[12px] leading-[15.6px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717]">{{ card.title }}</p>
+                <p class="text-[12px] leading-[15.6px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] mt-[12px]">{{ card.title }}</p>
+                <div class="flex justify-between mt-2 md:hidden">
+                    <div class="border-l-4 border-black">
+                        <p class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">{{ card.author }}</p>
+                    </div>
+                    <p class="text-[12px] leading-[12px]  text-[#002E40] font-poppins">{{ card.date }}</p>
+                </div>
             </div>
         </div>
     </section>
