@@ -1,8 +1,10 @@
 <script>
 import HeroPopuler from './components/HeroPopuler.vue';
+import NotFound from './components/NotFound.vue';
 export default {
     components:{
-        HeroPopuler:HeroPopuler
+        HeroPopuler:HeroPopuler,
+        NotFound:NotFound
     }
 }
 </script>
@@ -15,7 +17,9 @@ export default {
             </div>
         </header>
         <main id="site-main">
-            <HeroPopuler/>
+            
+            <NotFound/>
+            
         </main>
         <footer id="site-footer">
             <div class="footer-wrapper">
