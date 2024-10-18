@@ -58,8 +58,8 @@ export default {
             </div>
             <div class="flex justify-end items-center">
                 <div class="flex items-center justify-center">
-                    <p class="text-black text-[16px] font-bricolage pr-[8px]">See All</p>
-                    <img class="w-[27.7px] h-[16.51px]" :src="resourcesSvg" alt="Arrow Icon" />
+                    <p class="text-black text-[12] leading-[14.4px] md:text-[18px] md:leading-[21.6px] font-bricolage pr-[8px]">See All</p>
+                        <img class="w-[14px] h-[9.44px] md:w-[27.7px] md:h-[16.51px]" src="/svg/panah-kanan.svg" alt="Arrow Icon" 
                 </div>
             </div>
         </div>
@@ -71,29 +71,10 @@ export default {
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-12 gap-[20px] mt-[20px]">
-            <!-- bagian tengah mobile -->
-             <!-- <div class="md:hidden block col-span-12 md:col-span-6 relative">
-                <img :src="mustread.image_tengah_sm.url" alt="image" class="w-full h-full object-cover" />
-                <div class="absolute p-4 bottom-0">
-                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-bricolage mb-2">
-                        {{ mustread.judul_text_tengah || '.' }}
-                    </h2>
-                    <div class="flex items-start justify-between">
-                        <div class="border-l-4 border-yellow-500 pl-2">
-                            <p class="font-medium text-white text-sm sm:text-base font-bricolage">
-                                {{ mustread.judul_text_tengah_kecil || '.' }}
-                            </p>
-                        </div>
-                        <p class="text-sm sm:text-base text-white font-bricolage leading-6 ml-4">
-                            {{ mustread.text_tengah || '.' }}
-                        </p>
-                    </div>
-                </div>
-            </div> -->
             <!-- bagian kiri -->
             <div class=" order-2  col-span-6 md:col-span-3 items-center pl-[24px] md:px-0 ">
-                <div class="w-[153px] h-[213px] md:w-full md:h-auto">
-                    <img :src="mustread.image_kiri.url" alt="image" class="w-[154px] h-[140px] md:w-full md:h-auto" />
+                <div class="w-full h-auto">
+                    <img :src="mustread.image_kiri.url" alt="image" class="w-full h-auto" />
                     <div class="flex justify-between mt-[14px]">
                         <div class="border-l-4 border-black">
                             <p
@@ -120,8 +101,6 @@ export default {
                         @click="toggleReadMore">
                         {{ readMoreText ? 'Read Less' : 'Read More' }}
                     </button>
-                    
-                    
                 </div>
             </div>
             <!-- bagian tengah -->

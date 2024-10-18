@@ -4,7 +4,7 @@ import { ref } from 'vue';
 export default {
   setup() {
     const hero8video = ref({
-      video_hero8: { url: '/video/Believer.mp4', thumbnail: '/img/Believer-thumb.jpg' },
+      video_hero8: { url: '/video/Money.mp4', thumbnail: '/img/Believer-thumb.jpg' },
       judul_video8: 'M 4.8 Earthquake in Bali September 21, 2024: Analysis of up to 26 Damaged Buildings',
       deskripsi_video_8: 'An earthquake occurred in the Gianyar region of Bali September 21, 2024.An earthquake occurred in the Gianyar region of Bali September 21, 2024.An earthquake occurred in the Gianyar region of Bali September 21, 2024.An earthquake occurred in the Gianyar region of Bali September 21, 2024',
       text_kanan_video8: 'Sport',
@@ -13,21 +13,21 @@ export default {
 
     const hero8VideoData = ref([
       {
-        video_berita_hero8: { url: '/video/Thunder.mp4', thumbnail: '/img/thumb1.jpg' },
+        video_berita_hero8: { url: '/video/Money.mp4', thumbnail: '/img/thumb1.jpg' },
         judul_berita_hero8_video: 'M 4.8 Earthquake in Bali September 21, 2024: Analysis of up to 26 Damaged Buildings',
         title_berita_tengah_hero8: 'An earthquake occurred in the Gianyar region of Bali September 21, 2024.',
         title_berita_bawah_kanan_hero8: 'Sport',
         title_berita_bawah_kiri_hero8: 'Sep.24.2024',
       },
       {
-        video_berita_hero8: { url: '/video/video2.mp4', thumbnail: '/img/thumb2.jpg' },
+        video_berita_hero8: { url: '/video/Money.mp4', thumbnail: '/img/thumb2.jpg' },
         judul_berita_hero8_video: 'M 4.8 Earthquake in Bali September 21, 2024: Analysis of up to 26 Damaged Buildings',
         title_berita_tengah_hero8: 'An earthquake occurred in the Gianyar region of Bali September 21, 2024.',
         title_berita_bawah_kanan_hero8: 'Sport',
         title_berita_bawah_kiri_hero8: 'Sep.24.2024',
       },
       {
-        video_berita_hero8: { url: '/video/video3.mp4', thumbnail: '/img/thumb3.jpg' },
+        video_berita_hero8: { url: '/video/Money.mp4', thumbnail: '/img/thumb3.jpg' },
         judul_berita_hero8_video: 'M 4.8 Earthquake in Bali September 21, 2024: Analysis of up to 26 Damaged Buildings',
         title_berita_tengah_hero8: 'An earthquake occurred in the Gianyar region of Bali September 21, 2024.',
         title_berita_bawah_kanan_hero8: 'Sport',
@@ -61,8 +61,8 @@ export default {
         </div>
         <div class="flex justify-end items-center">
           <div class="flex items-center justify-center">
-            <p class="text-black text-[16px] pr-[8px] font-bricolage">See All</p>
-            <img class="w-[27.7px] h-[16.51px]" src="/svg/panah-kanan.svg" alt="Arrow Icon" />
+            <p class="text-black text-[12] leading-[14.4px] md:text-[18px] md:leading-[21.6px] font-bricolage pr-[8px]">See All</p>
+            <img class="w-[14px] h-[9.44px] md:w-[27.7px] md:h-[16.51px]" src="/svg/panah-kanan.svg" alt="Arrow Icon" />
           </div>
         </div>
       </div>
@@ -76,13 +76,13 @@ export default {
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-[24px] md:pt-[20px]">
         <!-- Multiple Videos (Desktop View) -->
-        <div class="space-y-6 order-2 px-[24px] md:px-0">
+        <div class="space-y-6 order-2 md:order-1 px-[24px] md:px-0">
           <div v-for="(item, index) in hero8VideoData" :key="index" class="flex gap-4 items-center justify-center">
             <div class="relative w-[50%] md:w-[200px]">
-              <video :src="item.video_berita_hero8.url" controls class="md:w-[238px] md:h-[228px] mb-0"></video>
+              <video :src="item.video_berita_hero8.url" controls class="w-[full] h-[auto] mb-0"></video>
             </div>
             <div class="w-[50%] md:w-[342px] md:h-[160px]">
-              <h2 class="md:text-[20px] md:leading-[24px] font-bold text-black font-bricolage">{{ item.judul_berita_hero8_video }}</h2>
+              <h2 class="text-[14px] leading-[20px] md:text-[20px] md:leading-[24px] font-bold text-black font-bricolage">{{ item.judul_berita_hero8_video }}</h2>
               <div class="hidden md:block">
                 <p id="readMoreText"
                 class="mt-[12px] text-[14px] leading-[22px] md:text-[16px] md:leading-[22px] font-bricolage overflow-hidden transition-all duration-300 ease-in-out"
@@ -91,11 +91,11 @@ export default {
                 @click="toggleReadMore">
                 {{ readMoreText ? 'Read Less' : 'Read More' }}
               </button>
+            </div>
               <div class="flex justify-between text-sm text-gray-500 font-bricolage mt-[12px]">
                 <span>{{ item.title_berita_bawah_kanan_hero8 }}</span>
                 <span>{{ item.title_berita_bawah_kiri_hero8 }}</span>
               </div>
-            </div>
             </div>
           </div>
           <div class="border-t-2 border-gray-500 my-2"></div>

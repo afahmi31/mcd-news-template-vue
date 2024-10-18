@@ -50,8 +50,8 @@ export default {
                 </div>
                 <div class="flex justify-end items-center">
                     <div class=" flex items-center justify-center">
-                        <p class="text-black text-[16px] pr-[8px]">See All</p>
-                        <img class="w-[27.7px] h-[16.51px]" src="/svg/panah-kanan.svg" alt="Arrow Icon" />
+                        <p class="text-black text-[12] leading-[14.4px] md:text-[18px] md:leading-[21.6px] font-bricolage pr-[8px]">See All</p>
+                        <img class="w-[14px] h-[9.44px] md:w-[27.7px] md:h-[16.51px]" src="/svg/panah-kanan.svg" alt="Arrow Icon" />
                     </div>
                 </div>
             </div>
