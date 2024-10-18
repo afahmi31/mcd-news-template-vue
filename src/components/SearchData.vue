@@ -181,75 +181,73 @@ export default {
 <template>
     <main > 
         <section class="flex justify-center">
-            <div class="container max-w-[1202px]  ">
-                <h1 class="w-[327px] md:w-[666px] lg:w-[777px] text-[14px] md:text-[20px] lg:text-[28px] mt-[48px] text-black font-bold font font-darkerGrotesque mb-[13px] lg:mb-[13px] ml-[20px]">
+            <div class="container  max-w-[327px] md:max-w-[768px] lg:max-w-[960px] xl:max-w-[1202px]   ">
+                <h1 class=" text-[14px] md:text-[20px] lg:text-[28px]  mt-[40px] lg:mt-[60px] text-black font-bold font font-darkerGrotesque mb-[13px] lg:mb-[13px] pl-[8px] ">
                     Search results: “badminton” found in 6097 documents
+                    <div class=" mb-[32px] lg:mb-[64px] "></div>
                 </h1>
-                <div class="border-b-2 mb-[32px] lg:mb-[64px]"></div>
                 <!-- Tampilkan item sesuai halaman saat ini -->
-                <div v-if="Elements" class="border-b my-[14px] pb-[90px] grid justify-items-center">
-                    <div v-for="Element in paginatedElements" :key="Element.title">
-                        <div :class="['Element', Element.kategori.toLowerCase(), ' grid justify-items-center md:flex md:gap-[34px]  ']">
+                <div v-if="Elements" class="my-[14px] pb-[90px] grid justify-items-center">
+                    <div v-for="(Element, index) in paginatedElements" :key="Element.title">
+                        <div :class="['Element', Element.kategori.toLowerCase(), 'w-full md:flex md:gap-[34px]', { 'no-border': index === paginatedElements.length - 1 }]">
                             <div>
-                                <img class="w-[285px] md:w-[300px] xl:w-[388px]" :src="Element.img" alt="image">
+                                <img class="w-[388px]" :src="Element.img" alt="image">
                             </div>
-                            <div class="w-[285px] md:w-[300px] lg:w-[600px]  xl:w-[777px]">
+                            <div class="w-[285px] md:w-[300px] lg:w-[600px] xl:w-[777px]">
                                 <div class="flex justify-between">
-                                    <div class="category mt-[12px] ">
-                                        <p class=" kategori ml-[15px]   text-[14px] lg:text-[24px] font-bold font-bricolage text-black">
+                                    <div class="category mt-[12px]">
+                                        <p class="kategori ml-[15px] text-[14px] lg:text-[24px] font-bricolage text-black">
                                             {{ Element.kategori }}
                                         </p>
                                     </div>
-                                    <p class=" date  mt-[12px] text-[10px] lg:text-[16px] text-[#BABABA] font-bricolage leading-[24px]">{{ Element.date }}</p>
+                                    <p class="date mt-[12px] text-[10px] lg:text-[16px] text-[#BABABA] font-bricolage leading-[24px]">{{ Element.date }}</p>
                                 </div>
-                                <p class=" title text-[12px] lg:text-[20px] my-[12px] xl:mt-[40px] xl:mb-[21px] font-semibold leading-[130%] text-[#050810] font-bricolage">
+                                <p class="title text-[12px] lg:text-[20px] my-[12px] xl:mt-[40px] xl:mb-[21px] font-bold leading-[130%] text-[#050810] font-bricolage">
                                     {{ Element.title }}
-                                </p> 
-                                
+                                </p>
                                 <p class="dest text-[12px] lg:text-[18px] xl:mt-[23px] text-[#8B919E] leading-[13px] md:leading-[20px] xl:leading-[27px] font-bricolage">
-                                {{ Element.showFullText ? Element.dest : (Element.dest.slice(0, 181) + '') }}
-                                <button class="text-[#002E40] text-[12px] lg:text-[16px] font-bold underline ml-2" @click="toggleText(Element)">
-                                    {{ Element.showFullText ? 'Read Less' : 'Read More...' }}
-                                </button>
-                               </p>
-
-                                                        </div>
+                                    {{ Element.showFullText ? Element.dest : (Element.dest.slice(0, 181) + '') }}
+                                    <button class="text-[#0051FF] text-[12px] lg:text-[18px]" @click="toggleText(Element)">
+                                        {{ Element.showFullText ? 'Read Less' : 'Read More...' }}
+                                    </button>
+                                </p>
+                            </div>
                         </div>
-                        <div class="border-b my-[14px]"></div>
                     </div>
+                    
                 </div>
-
+                <div class="border-b "></div>
                 <!-- Pagination -->
-                <div class="pagination md:flex justify-center mt-8 hidden ">
-        <!-- Tombol Previous -->
-                <button 
-                    class="mx-2 px-4 py-2 rounded " 
-                    @click="changePage(currentPage - 1)" 
-                    :disabled="currentPage === 1"
-                    :class="{'cursor-not-allowed opacity-50': currentPage === 1}">
-                    <
-                </button>
+                <div class="pagination md:flex justify-center mt-[90px] mb-[60px] hidden">
+                    <!-- Tombol Previous -->
+                    <button 
+                        class="mx-2 px-4 py-2 rounded" 
+                        @click="changePage(currentPage - 1)" 
+                        :disabled="currentPage === 1"
+                        :class="{'cursor-not-allowed opacity-50': currentPage === 1}">
+                        <
+                    </button>
 
-        <!-- Tombol Pagination -->
+                    <!-- Tombol Pagination -->
                     <button 
                         v-for="page in totalPages" 
                         :key="page" 
                         @click="changePage(page)" 
-                        class="mx-[12px] px-4 py-2 rounded " 
+                        class="mx-[12px] px-4 py-2 rounded" 
                         :class="{'bg-green-500 text-white': page === currentPage, 'bg-white': page !== currentPage}">
                         {{ page }}
                     </button>
 
                     <!-- Tombol Next -->
                     <button 
-                        class="mx-2 px-4 py-2 rounded " 
+                        class="mx-2 px-4 py-2 rounded" 
                         @click="changePage(currentPage + 1)" 
                         :disabled="currentPage === totalPages"
                         :class="{'cursor-not-allowed opacity-50': currentPage === totalPages}">
                         >
                     </button>
-                            </div>
-
+                 
+                </div>
             </div>
         </section>
     </main>
@@ -257,12 +255,24 @@ export default {
 
 <style scoped>
 .sport .category {
-    border-left: 4px solid yellow ;
+    border-left: 4px solid #FFD900;
 }
 .politics .category {
     border-left: 4px solid blue;
 }
 .business .category {
     border-left: 4px solid gray;
+}
+
+/* Gaya untuk item dengan border */
+.Element {
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 10px; /* Tambahkan jarak bawah */
+    padding-top: 10px;    /* Tambahkan jarak atas */
+}
+
+/* Gaya untuk item terakhir (tanpa border) */
+.Element.no-border {
+    border-bottom: none;
 }
 </style>
