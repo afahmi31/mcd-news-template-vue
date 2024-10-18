@@ -17,7 +17,7 @@ export default {
       firaCode: ["Fira Code", "monospace"],
       montserrat: ["Montserrat", "sans-serif"],
       Spartan: ["SpartanMB", "sans-serif"],
-      Bricolage: ["Bricolage", "sans-serif"],
+      Bricolage: ["Bricolage Grotesque", "sans-serif"],
     },
     container: {
       center: true,
