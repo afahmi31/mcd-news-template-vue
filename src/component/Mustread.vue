@@ -45,72 +45,73 @@ export default {
 </script>
 
 <template>
-    <section class="container lg:max-w-[1200px] mx-auto pt-[74px]">
-        <div class="grid grid-cols-2 md:grid-cols-2 px-[24px] md:px-0">
-            <div class="flex gap-1 flex-wrap">
-                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-black">
+    <section class="pt-[30px] md:pt-[40px]">
+        <div class="container lg:max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-2 px-[24px] md:px-0">
+                <div class="flex gap-1 flex-wrap">
+                    <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold font-bricolage text-black">
                     {{ mustread.judul_must || '.' }}
                 </h1>
-                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold text-red-600">
+                <h1 class="text-[18px] leading-[21.6px] md:text-[40px] md:leading-[48px] font-semibold font-bricolage text-red-600">
                     {{ mustread.judul_read || '.' }}
                 </h1>
             </div>
-            <div class="flex justify-end items-center py-[6px]">
+            <div class="flex justify-end items-center">
                 <div class="flex items-center justify-center">
-                    <p class="text-black text-[16px] pr-[8px]">See All</p>
-                    <img :src="resourcesSvg" alt="Arrow Icon" />
+                    <p class="text-black text-[16px] font-bricolage pr-[8px]">See All</p>
+                    <img class="w-[27.7px] h-[16.51px]" :src="resourcesSvg" alt="Arrow Icon" />
                 </div>
             </div>
         </div>
-
+        
         <div class="flex gap-[12px] flex-wrap px-[24px] md:px-0">
             <div class="border-[2px] w-[81px] md:w-[244px] border-black mt-2"></div>
             <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
             <div class="border-[2px] w-[26px] md:w-[32px] border-black mt-2"></div>
         </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-12 gap-[20px] pt-5  ">
+        
+        <div class="grid grid-cols-2 md:grid-cols-12 gap-[20px] mt-[20px]">
             <!-- bagian tengah mobile -->
-            <div class="md:hidden block col-span-12 md:col-span-6 relative">
+             <!-- <div class="md:hidden block col-span-12 md:col-span-6 relative">
                 <img :src="mustread.image_tengah_sm.url" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute p-4 bottom-0">
-                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
+                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-bricolage mb-2">
                         {{ mustread.judul_text_tengah || '.' }}
                     </h2>
                     <div class="flex items-start justify-between">
                         <div class="border-l-4 border-yellow-500 pl-2">
-                            <p class="font-medium text-white text-sm sm:text-base font-poppins">
+                            <p class="font-medium text-white text-sm sm:text-base font-bricolage">
                                 {{ mustread.judul_text_tengah_kecil || '.' }}
                             </p>
                         </div>
-                        <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">
+                        <p class="text-sm sm:text-base text-white font-bricolage leading-6 ml-4">
                             {{ mustread.text_tengah || '.' }}
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- bagian kiri -->
-            <div class="col-span-6 md:col-span-3 items-center pl-[24px] md:px-0 ">
+            <div class=" order-2  col-span-6 md:col-span-3 items-center pl-[24px] md:px-0 ">
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
                     <img :src="mustread.image_kiri.url" alt="image" class="w-[154px] h-[140px] md:w-full md:h-auto" />
-                    <div class="flex justify-between mt-2">
+                    <div class="flex justify-between mt-[14px]">
                         <div class="border-l-4 border-black">
                             <p
-                                class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">
+                            class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-bricolage text-[#002E40]">
                                 {{ mustread.text_judul_kecil_kiri || '.' }}
                             </p>
                         </div>
-                        <p class="text-[12px] leading-[12px] text-[#002E40] font-poppins">
+                        <p class="text-[12px] leading-[12px] text-[#002E40] font-bricolage">
                             {{ mustread.text_kiri || '.' }}
                         </p>
                     </div>
                     <h2
-                        class="text-[16px] leading-[20.8px] md:text-[20px] md:leading-[26px] font-semibold font-inter mt-3">
+                        class="text-[16px] leading-[20.8px] md:text-[20px] md:leading-[26px] font-semibold font-bricolage mt-3">
                         {{ mustread.judul_text_kiri || '.' }}
                     </h2>
                     <div class="border-t-2 border-gray-500 my-2"></div>
                     <p id="readMoreText"
-                        class="text-[14px] leading-[22px] md:text-[16px] md:leading-[22px] font-inter overflow-hidden transition-all duration-300 ease-in-out"
+                        class="text-[14px] leading-[22px] md:text-[16px] md:leading-[22px] font-bricolage overflow-hidden transition-all duration-300 ease-in-out"
                         :class="readMoreText ? 'max-h-full' : 'max-h-[4.5rem]'">
                         {{ mustread.desciption_text_kiri || '.' }}
                     </p>
@@ -119,42 +120,42 @@ export default {
                         @click="toggleReadMore">
                         {{ readMoreText ? 'Read Less' : 'Read More' }}
                     </button>
-
-
+                    
+                    
                 </div>
             </div>
             <!-- bagian tengah -->
-            <div class="hidden md:block col-span-12 md:col-span-6 relative">
+            <div class=" order-1 md:order-2 col-span-12 md:col-span-6 relative">
                 <img :src="mustread.image_tengah.url" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute p-4 bottom-0">
-                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-inter mb-2">
+                    <h2 class="md:text-[32px] md:leading-[113%] sm:text-lg font-bold text-white font-bricolage ">
                         {{ mustread.judul_text_tengah || '.' }}
                     </h2>
-                    <div class="flex items-start justify-between">
+                    <div class="flex items-start justify-between mt-[14px]">
                         <div class="border-l-4 border-yellow-500 pl-2">
-                            <p class="font-medium text-white text-sm sm:text-base font-poppins">
+                            <p class="font-medium text-white text-sm sm:text-base font-bricolage">
                                 {{ mustread.judul_text_tengah_kecil || '.' }}
                             </p>
                         </div>
-                        <p class="text-sm sm:text-base text-white font-poppins leading-6 ml-4">
+                        <p class="text-sm sm:text-base text-white font-bricolage leading-6 ml-4">
                             {{ mustread.text_tengah || '.' }}
                         </p>
                     </div>
                 </div>
             </div>
             <!-- bagian kanan -->
-            <div class="col-span-6 md:col-span-3 space-y-4 pr-[24px] md:px-0">
+            <div class=" order-2  col-span-6 md:col-span-3 space-y-4 pr-[24px] md:px-0">
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
                     <img :src="mustread.image_kanan1.url" alt="image"
-                        class="w-[153px] h-[95px] md:w-full md:h-full object-cover" />
-                    <div class="flex  justify-between mt-2">
+                    class="w-[153px] h-[95px] md:w-full md:h-full object-cover" />
+                    <div class="flex  justify-between mt-[14px]">
                         <div class="border-l-4 border-black">
                             <p
-                                class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">
-                                {{ mustread.judul_kecil_kanan1 }}
+                            class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-bricolage text-[#002E40]">
+                            {{ mustread.judul_kecil_kanan1 }}
                             </p>
                         </div>
-                        <p class=" text-[12px] leading-[12px] text-[#002E40] font-poppins">
+                        <p class=" text-[12px] leading-[12px] text-[#002E40] font-bricolage">
                             {{ mustread.text_kanan1 }}
                         </p>
                     </div>
@@ -167,23 +168,24 @@ export default {
                 <div class="w-[153px] h-[213px] md:w-full md:h-auto">
                     <img :src="mustread.image_kanan2.url" alt="image"
                         class="w-[153px] h-[95px] md:w-full md:h-full object-cover" />
-                    <div class="flex justify-between mt-2">
+                        <div class="flex justify-between mt-[14px]">
                         <div class="border-l-4 border-black">
                             <p
-                                class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-poppins text-[#002E40]">
+                                class="ml-[10px] text-[14px] leading-[14px] md:text-[16px] md:leading-[16px] font-bold font-bricolage text-[#002E40]">
                                 {{ mustread.judul_kecil_kanan2 }}
                             </p>
                         </div>
-                        <p class=" text-[12px] leading-[12px] text-[#002E40] font-poppins">
+                        <p class=" text-[12px] leading-[12px] text-[#002E40] font-bricolage">
                             {{ mustread.text_kanan2 }}
                         </p>
                     </div>
                     <h2
-                        class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-[12px]">
-                        {{ mustread.description_text_kanan2 }}
-                    </h2>
-                </div>
+                    class="text-[14px] leading-[18.2px] md:text-[20px] md:leading-[26px] font-semibold text-[#1D1717] font-bricolage mt-[12px]">
+                    {{ mustread.description_text_kanan2 }}
+                </h2>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+</section>
 </template>
