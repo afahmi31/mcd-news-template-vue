@@ -91,7 +91,7 @@ export default {
             </div>
             <div class="w-[50%] md:w-[342px] md:h-[160px]">
               <h2
-                class="text-[14px] leading-[20px] md:text-[20px] md:leading-[24px] font-bold text-black font-bricolage">
+                class="pt-[22.5px] text-[14px] leading-[20px] md:text-[20px] md:leading-[24px] font-bold text-black font-bricolage">
                 {{ item.judul_berita_hero8_video }}</h2>
               <!-- <div class="hidden md:block">
                 <p id="readMoreText"
