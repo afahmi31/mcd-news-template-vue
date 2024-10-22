@@ -150,8 +150,10 @@ export default {
                     showFullText: false
                 },
             ],
-            currentPage: 1,  // Halaman saat ini
-            itemsPerPage: 5  // Jumlah item per halaman
+
+
+            currentPage: 1,
+            itemsPerPage: 5 
         }
     },
     computed: {
@@ -182,32 +184,31 @@ export default {
     <main > 
         <section class="flex justify-center">
             <div class="container  max-w-[327px] md:max-w-[768px] lg:max-w-[960px] xl:max-w-[1202px]   ">
-                <div>
-                    <h1 class=" text-[14px] md:text-[20px] lg:text-[28px]  mt-[48px] mb-[12px] lg:mt-[60px] text-black font-bold font-darkerGrotesque  lg:mb-[13px] ml-[8px] md:ml-[20px] w-[253px] md:w-full ">
+                <div class="border-b mt-[12px] mb-[40px]">
+                    <h1 class=" text-[14px] md:text-[20px] lg:text-[28px]  mt-[48px] mb-[12px] lg:mt-[60px] text-black font-bold font-darkerGrotesque  lg:mb-[13px] ml-[8px] md:ml-[20px] w-full  ">
                         Search results:“badminton” found in 6097 documents
                     </h1>
                 </div>
-                <div class=" border-b mt-[12px] mb-[40px] "></div>
                 <!-- Tampilkan item sesuai halaman saat ini -->
                 <div v-if="Elements" class="pb-[36px] lg:pb-[90px]  lg:grid lg:justify-items-center">
                     <div v-for="(Element, index) in paginatedElements" :key="Element.title">
                         <div :class="['Element', Element.kategori.toLowerCase(), ' md:flex justify-center ite md:gap-[34px] lg:border-b lg:flex items-center', { 'no-border': index === paginatedElements.length - 1 }]">
                             <div> 
-                                <img class="w-[388px]  " :src="Element.img" alt="image">
+                                <img class=" w-full md:w-[250px] lg:w-[388px]  " :src="Element.img" alt="image">
                             </div>
-                            <div class="w-full md:w-[300px] lg:w-[600px] xl:w-[777px] ">
-                                <div class="flex justify-between">
-                                    <div class="category mt-[12px]">
+                            <div class="w-full md:w-[450px] lg:w-[600px] xl:w-[777px] ">
+                                <div class="flex justify-between mt-[12px]">
+                                    <div class="category ">
                                         <p class="kategori ml-[15px] text-[14px] lg:text-[24px] font-bricolage text-black">
                                             {{ Element.kategori }}
                                         </p>
                                     </div>
-                                    <p class="date mt-[12px] text-[10px] lg:text-[16px] text-[#BABABA] font-bricolage leading-[24px]">{{ Element.date }}</p>
+                                    <p class="date  text-[10px] lg:text-[16px] text-[#BABABA] font-bricolage leading-[24px]">{{ Element.date }}</p>
                                 </div>
-                                <p class="title text-[12px] lg:text-[20px] my-[12px] xl:mt-[40px] xl:mb-[21px] font-bold leading-[130%] text-[#050810] font-bricolage">
+                                <p class="title text-[12px] md:text-[14px] lg:text-[20px] my-[12px] xl:mt-[40px] xl:mb-[21px] font-bold leading-[130%] text-[#050810] font-bricolage">
                                     {{ Element.title }}
                                 </p>
-                                <p class="dest text-[12px] xl:text-[18px] xl:mt-[23px] text-[#8B919E] leading-[13px] md:leading-[20px] xl:leading-[27px] font-bricolage">
+                                <p class="dest text-[12px] md:text-[14px] xl:text-[18px] xl:mt-[23px] text-[#8B919E] leading-[13px] md:leading-[20px] xl:leading-[27px] font-inter">
                                     {{ Element.showFullText ? Element.dest : (Element.dest.slice(0, 181) + '') }}
                                     <button class="text-[#0051FF] text-[12px] lg:text-[18px]" @click="toggleText(Element)">
                                         {{ Element.showFullText ? 'Read Less' : 'Read More...' }}
@@ -220,7 +221,7 @@ export default {
                 </div>
                 <div class=" lg:border-b  "></div>
                 <!-- Pagination -->
-                <div class="pagination md:flex justify-center lg:mt-[90px] lg:mb-[60px] ">
+                <div class="pagination md:flex justify-center lg:mt-[90px] my-[40px] md:my-[60px]">
                     <!-- Tombol Previous -->
                     <button 
                         class="mx-2 px-4 py-2 rounded" 
@@ -235,8 +236,8 @@ export default {
                         v-for="page in totalPages" 
                         :key="page" 
                         @click="changePage(page)" 
-                        class="ml-[12px] px-[9px] lg:px-4 py-[4px] lg:py-2 rounded-[5px]" 
-                        :class="{'bg-[#3E86DD] text-white': page === currentPage, 'bg-white': page !== currentPage}">
+                        class="ml-[12px] px-[9px] hover:bg-[#3E86DD] hover:text-white lg:px-4 py-[4px] lg:py-2 rounded-[5px]" 
+                        :class="{'   text-white bg-[#3E86DD]': page === currentPage, 'bg-white': page !== currentPage}">
                         {{ page }}
                     </button>
 
