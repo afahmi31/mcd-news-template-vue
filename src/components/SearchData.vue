@@ -182,18 +182,20 @@ export default {
     <main > 
         <section class="flex justify-center">
             <div class="container  max-w-[327px] md:max-w-[768px] lg:max-w-[960px] xl:max-w-[1202px]   ">
-                <h1 class=" text-[14px] md:text-[20px] lg:text-[28px]  mt-[40px] lg:mt-[60px] text-black font-bold font font-darkerGrotesque mb-[13px] lg:mb-[13px] pl-[8px] ">
-                    Search results: “badminton” found in 6097 documents
-                    <div class=" mb-[32px] lg:mb-[64px] "></div>
-                </h1>
+                <div>
+                    <h1 class=" text-[14px] md:text-[20px] lg:text-[28px]  mt-[48px] mb-[12px] lg:mt-[60px] text-black font-bold font-darkerGrotesque  lg:mb-[13px] ml-[8px] md:ml-[20px] w-[253px] md:w-full ">
+                        Search results:“badminton” found in 6097 documents
+                    </h1>
+                </div>
+                <div class=" border-b mt-[12px] mb-[40px] "></div>
                 <!-- Tampilkan item sesuai halaman saat ini -->
-                <div v-if="Elements" class="my-[14px] pb-[90px] grid justify-items-center">
+                <div v-if="Elements" class="pb-[36px] lg:pb-[90px]  lg:grid lg:justify-items-center">
                     <div v-for="(Element, index) in paginatedElements" :key="Element.title">
-                        <div :class="['Element', Element.kategori.toLowerCase(), 'w-full md:flex md:gap-[34px]', { 'no-border': index === paginatedElements.length - 1 }]">
-                            <div>
-                                <img class="w-[388px]" :src="Element.img" alt="image">
+                        <div :class="['Element', Element.kategori.toLowerCase(), ' md:flex justify-center ite md:gap-[34px] lg:border-b lg:flex items-center', { 'no-border': index === paginatedElements.length - 1 }]">
+                            <div> 
+                                <img class="w-[388px]  " :src="Element.img" alt="image">
                             </div>
-                            <div class="w-[285px] md:w-[300px] lg:w-[600px] xl:w-[777px]">
+                            <div class="w-full md:w-[300px] lg:w-[600px] xl:w-[777px] ">
                                 <div class="flex justify-between">
                                     <div class="category mt-[12px]">
                                         <p class="kategori ml-[15px] text-[14px] lg:text-[24px] font-bricolage text-black">
@@ -205,7 +207,7 @@ export default {
                                 <p class="title text-[12px] lg:text-[20px] my-[12px] xl:mt-[40px] xl:mb-[21px] font-bold leading-[130%] text-[#050810] font-bricolage">
                                     {{ Element.title }}
                                 </p>
-                                <p class="dest text-[12px] lg:text-[18px] xl:mt-[23px] text-[#8B919E] leading-[13px] md:leading-[20px] xl:leading-[27px] font-bricolage">
+                                <p class="dest text-[12px] xl:text-[18px] xl:mt-[23px] text-[#8B919E] leading-[13px] md:leading-[20px] xl:leading-[27px] font-bricolage">
                                     {{ Element.showFullText ? Element.dest : (Element.dest.slice(0, 181) + '') }}
                                     <button class="text-[#0051FF] text-[12px] lg:text-[18px]" @click="toggleText(Element)">
                                         {{ Element.showFullText ? 'Read Less' : 'Read More...' }}
@@ -216,9 +218,9 @@ export default {
                     </div>
                     
                 </div>
-                <div class="border-b "></div>
+                <div class=" lg:border-b  "></div>
                 <!-- Pagination -->
-                <div class="pagination md:flex justify-center mt-[90px] mb-[60px] hidden">
+                <div class="pagination md:flex justify-center lg:mt-[90px] lg:mb-[60px] ">
                     <!-- Tombol Previous -->
                     <button 
                         class="mx-2 px-4 py-2 rounded" 
@@ -233,8 +235,8 @@ export default {
                         v-for="page in totalPages" 
                         :key="page" 
                         @click="changePage(page)" 
-                        class="mx-[12px] px-4 py-2 rounded" 
-                        :class="{'bg-green-500 text-white': page === currentPage, 'bg-white': page !== currentPage}">
+                        class="ml-[12px] px-[9px] lg:px-4 py-[4px] lg:py-2 rounded-[5px]" 
+                        :class="{'bg-[#3E86DD] text-white': page === currentPage, 'bg-white': page !== currentPage}">
                         {{ page }}
                     </button>
 
@@ -258,7 +260,7 @@ export default {
     border-left: 4px solid #FFD900;
 }
 .politics .category {
-    border-left: 4px solid blue;
+    border-left: 4px solid black
 }
 .business .category {
     border-left: 4px solid gray;
@@ -266,7 +268,7 @@ export default {
 
 /* Gaya untuk item dengan border */
 .Element {
-    border-bottom: 2px solid #E5E7EB;
+    
     padding-bottom: 10px; /* Tambahkan jarak bawah */
     padding-top: 10px;    /* Tambahkan jarak atas */
 }
