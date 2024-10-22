@@ -102,26 +102,26 @@ export default {
                     <div class="hidden md:block mt-3">
                         <div class="flex justify-between">
                             <div class="border-l-4 border-black">
-                                <p class="ml-2 text-[14px] md:text-[16px] font-bold text-[#002E40]">{{ card.author }}
+                                <p class="ml-2 text-[14px] md:text-[16px] font-bold text-[#002E40] font-bricolage">{{ card.author }}
                                 </p>
                             </div>
-                            <p class="text-[12px] text-[#002E40]">{{ card.date }}</p>
+                            <p class="text-[12px] text-[#002E40] font-bricolage">{{ card.date }}</p>
                         </div>
-                        <p class="text-[12px] md:text-[20px] font-semibold text-[#1D1717] mt-3">
+                        <p class="text-[12px] md:text-[20px] font-semibold font-bricolage text-[#1D1717] mt-3">
                             {{ card.title }}
                         </p>
                     </div>
                     <div class=" md:hidden h-full flex flex-col justify-around ">
-                        <p class="text-[12px] font-semibold text-[#1D1717] my-3">
+                        <p class="text-[12px] font-semibold text-[#1D1717] font-bricolage my-3">
                             {{ card.title }}
                         </p>
                         <div class="flex justify-between items-center mt-auto">
                             <div class="border-l-4 border-black">
-                                <p class="ml-2 text-[14px] font-bold text-[#002E40]">
+                                <p class="ml-2 text-[14px] font-bold font-bricolage text-[#002E40]">
                                     {{ card.author }}
                                 </p>
                             </div>
-                            <p class="text-[12px] text-[#002E40]">{{ card.date }}</p>
+                            <p class="text-[12px] text-[#002E40] font-bricolage">{{ card.date }}</p>
                         </div>
                     </div>
 

@@ -26,7 +26,7 @@ export default {
                         <div class="border-l-4 border-yellow-500 pl-2">
                             <p class="font-medium text-white text-[16px] leading-[16px] font-bricolage">Populer</p>
                         </div>
-                        <p class="hidden md:block text-[16px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p>
+                        <!-- <p class="hidden md:block text-[16px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p> -->
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export default {
                             <div class="border-l-4 border-yellow-500 pl-2">
                                 <p class="font-medium text-white text-[16px] leading-[16px] font-bricolage">Populer</p>
                             </div>
-                            <p class="hidden md:block text-[16px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p>
+                            <!-- <p class="hidden md:block text-[16px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p> -->
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default {
                                     <div class="border-l-4 border-yellow-500 pl-2">
                                         <p class="font-medium text-white text-[16px] leading-[16px] font-bricolage">Populer</p>
                                     </div>
-                                    <p class="hidden md:block text-[12px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p>
+                                    <!-- <p class="hidden md:block text-[12px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p> -->
                                 </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ export default {
                                     <div class="border-l-4 border-yellow-500 pl-2">
                                         <p class="font-medium text-white text-[16px] leading-[16px] font-bricolage">Populer</p>
                                     </div>
-                                    <p class="hidden md:block text-[12px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p>
+                                    <!-- <p class="hidden md:block text-[12px] leading-[16px] text-white font-bricolage ml-4">Sep.24.2024</p> -->
                                 </div>
                         </div>
                     </div>
