@@ -56,6 +56,18 @@
                     this.activeSubMenuMobile = subMenuMobileTitle;
                 }
             },
+            showArrow(index) {
+                const indexImage = [3,4,5];
+                return indexImage.includes(index);
+            },
+            imageSrc(index) {
+                const imageUrl = {
+                3 : '/chevron-down.svg',
+                4 : '/chevron-down.svg',
+                5 : '/chevron-down.svg',
+                };
+                return imageUrl[index] || '';
+            }
         },
     };         
 </script>
@@ -98,14 +110,14 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto flex items-center justify-between py-[11.5px] lg:py-0 gap-[24px] md:gap-0  bg-white">
+        <div class="container mx-auto flex items-center justify-between lg:py-0 gap-[24px] md:gap-[14px] lg:gap-[26px] bg-white">
             <!-- menu dekstop -->
             <div v-if="p_menus" class="hidden md:block ">
                 <ul class="menu flex">
+                    <!-- hot news -->
                     <li class="group lg:px-[20px] lg:py-[18px] px-[10px] py-[13px] bg-listNav bg-opacity-10 font-bold text-listNav cursor-pointer font-bricolage text-[10px] lg:text-[12px] xl:text-[16px] ease-in-out duration-500">
-                        <!-- hot news -->
                         <a href="#">Hot News</a>
-                        <div class="absolute hidden group-hover:flex mt-[23px] w-full gap-[24px] px-[44.5px] items-center justify-center pl-[21px] py-[29.5px] left-0 bg-white">
+                        <div class="absolute hidden group-hover:flex mt-[18px] w-full gap-[24px] px-[44.5px] items-center justify-center pl-[21px] py-[29.5px] left-0 bg-white">
                             <figure class=" lg:w-[203px] md:w-[130px]">
                                 <img src="/image1.png" alt="image" />
                                 <figcaption class="mt-2 category">
@@ -159,35 +171,41 @@
                         </div>
                     </li>   
                     <li
-                    v-for="value in p_menus"
-                    :key="value.name"
+                    v-for="(value,index) in p_menus"
+                    :key="index"
                     :class="[
-                        activeMenu === value.name ? 'border-b-4 border-listNav z-[1]':'',
+                        activeMenu === value.name ? 'border-b-2 border-listNav z-[1]':'',
                         value.name.replace(/\s+/g, '').toLowerCase()
                     ]"
                     @click.prevent = "toggleMenu(value.name)"
-                    class="group lg:px-[20px] lg:py-[18px] px-[10px] py-[13px] hover:bg-listNav hover:bg-opacity-10 hover:font-bold hover:text-listNav cursor-pointer text-garyText font-bricolage text-[10px] lg:text-[12px] xl:text-[16px] ease-in-out duration-500">
+                    class="group lg:px-[15px] lg:py-[11px] px-[8px] py-[10px] hover:bg-listNav hover:bg-opacity-10 hover:text-listNav cursor-pointer text-garyText font-bricolage text-[10px] lg:text-[12px] xl:text-[16px] leading-[19.2px] ease-in-out duration-500 justify-center items-center flex gap-[8px]">
                         <a class="" href="#">{{ value.name }}</a>
+                        <img 
+                        v-if="showArrow(index)" 
+                        :src="imageSrc(index)" 
+                        class="lg:w-[15px] md:w-[12px]"
+                        alt="chevron">
                         <!-- sub menu -->
                         <ul
-                        class="subMenu absolute hidden group-hover:block mt-[23px] w-full h-[50%] bg-white border-r-2 border-gray-200 pl-[21px] py-[29.5px] left-0"
+                        class="subMenu absolute hidden group-hover:block md:top-[106px] lg:top-[119px] xl:top-[125px] w-full h-[50%] bg-white border-r-2 border-gray-200 pl-[21px] py-[29.5px] left-0"
                         v-if="value.subMenu">
                             <li
                             v-for="item in value.subMenu" :key="item.title"
-                            class="py-[9px] pl-[21px] border-b border-gray-200 lg:w-[161px] w-[120px]" :class="activeSubMenu === item.title ? 'bg-listNav bg-opacity-10':'' ">
-                                <p @click.prevent="toggleSubMenu(item.title)">{{ item.title }}</p>
+                            class="py-[9px] pl-[8px] border-b border-gray-200 lg:w-[250px] w-[150px]" :class="activeSubMenu === item.title ? 'bg-listNav bg-opacity-10':'' ">
+                                <p 
+                                class="cursor-pointer lg:text-[14px] lg:leading-[16.8px] font-medium font-bricolage" @click.prevent="toggleSubMenu(item.title)">{{ item.title }}</p>
                                 <div
                                 v-if="activeSubMenu === item.title"
-                                class="absolute top-0 left-[200px] px-4 py-2 w-[200px] flex lg:gap-[24px] md:gap-[14px]  bg-white">
+                                class="absolute top-0 left-[190px] lg:left-[300px] py-2 w-[200px] flex lg:gap-[24px] md:gap-[14px]  bg-white">
                                 <!-- sub item -->
                                 <div v-for="(subItem, index) in item.subItem" class="">
-                                    <figure class="lg:w-[203px] md:w-[125px]">
+                                    <figure class="lg:w-[150px] xl:w-[203px] md:w-[125px]">
                                         <img :src="subItem.image" alt="image" />
                                         <figcaption class="category mt-2">
                                             <p class="text-black font-normal leading-[14.4px] lg:text-[12px] md:text-[10px]">{{ subItem.desc }}</p>
                                             <div class="flex justify-between font-normal mt-[10px]">
-                                                <p :class="subItem.category.replace(/\s+/g, '').toLowerCase()" class="text-black">{{ subItem.category }}</p>
-                                                <p class="text-dateText">{{ subItem.date }}</p>
+                                                <p :class="subItem.category.replace(/\s+/g, '').toLowerCase()" class="text-black lg:text-[14px] lg:leading-[14px] text-[10px] leading-[12px] font-bricolage">{{ subItem.category }}</p>
+                                                <p class="text-dateText lg:text-[12px] lg:leading-[12px] text-[10px] leading-[10px] font-bricolage">{{ subItem.date }}</p>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -199,7 +217,7 @@
                 </ul>
             </div>
             <!-- search -->
-            <div class="search-wrapper flex lg:px-[12px] lg:py-[10px] md:px-[7px] md:py-[5px] py-[10px] px-[12px] gap-[5px] border border-gray-300 rounded-[5px] w-full lg:max-w-[285px] md:max-w-[185px] z-[1]">
+            <div class="search-wrapper flex lg:px-[12px] lg:py-[10px] md:px-[7px] md:py-[5px] py-[10px] px-[12px] gap-[5px] border border-gray-300 rounded-[5px] lg:max-w-[285px] md:max-w-[185px] z-[1]">
                 <img src="../assets/search.svg" alt="search">
                 <input 
                 class="w-full outline-none" 
@@ -240,16 +258,32 @@
     color : #12B04B;
     font-weight: 700;
 }
-.category .sport{
-    padding-left: 15px; 
+@media screen and (min-width: 768px) {
+    .category .sport{
+        padding-left: 15px; 
+        border-left: 4px solid blue;
+    }
+    .category .business{
+        padding-left: 15px; 
+        border-left: 4px solid rgb(6, 174, 3);
+    }
+    .category .politics{
+        padding-left: 15px; 
+        border-left: 4px solid red;
+    }
+}
+@media screen and (max-width: 768px) {
+    .category .sport{
+    padding-left: 8px; 
     border-left: 4px solid blue;
 }
 .category .business{
-    padding-left: 15px; 
+    padding-left: 8px; 
     border-left: 4px solid rgb(6, 174, 3);
 }
 .category .politics{
-    padding-left: 15px; 
+    padding-left: 8px; 
     border-left: 4px solid red;
+}
 }
 </style>

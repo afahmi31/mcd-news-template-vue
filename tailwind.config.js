@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         navIcon: '#2E2E2E',
-        listNav : '#12B04B',
+        listNav : '#3E86DD',
         garyText : '#4B4B4B',
         dateText : '#848484',
         footerBg : '#151515',

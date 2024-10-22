@@ -5,11 +5,11 @@
 <template>
     <section class="lg:mt-[71px] md:mt-[51px] mt-[71px]">
         <div class="container mx-auto">
-            <!-- title -->
+            <!-- title and line-->
             <div class="flex gap-[7px] justify-center items-center text-center">
-                <div class="lg:border-4 border-2 border-black w-full h-0"></div>
+                <div class="lg:border-t-2 border-2 border-black w-full h-0"></div>
                 <p class="lg:text-[40px] lg:leading-[48px] text-[20px] leading-[24px] font-semibold w-full font-bricolage">Sport <span class="text-red-500">News</span></p>
-                <div class="lg:border-4 border-2 border-black w-full h-0"></div>
+                <div class="lg:border-2 border-2 border-black w-full h-0"></div>
             </div>
             <div class="relative mt-[26px]">
                 <img class="w-full object-cover over lg:h-[544px] h-[231px] md:h-[321px]" src="../assets/heroCategory.png" alt="hero-categor">
